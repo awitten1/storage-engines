@@ -15,7 +15,8 @@ access_example(void)
     /* Open a connection to the database, creating it if necessary. */
     wiredtiger_open(home, NULL,
             """create,cache_size=4GB,log=(enabled,recover=on),"""
-            """statistics_log=(json=true),transaction_sync=(enabled=true,method=fsync)""", &conn);
+            """statistics_log=(json=true,on_close=true),transaction_sync=(enabled=true,method=fsync),"""
+            """log=(enabled=true,compressor=snappy)""", &conn);
 
     /* Open a session handle for the database. */
     conn->open_session(conn, NULL, NULL, &session);
