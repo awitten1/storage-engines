@@ -1,3 +1,9 @@
 [submodule "third_party/wiredtiger"]
 	path = third_party/wiredtiger
 	url = git@github.com:wiredtiger/wiredtiger.git
+[submodule "third_party/rocksdb"]
+	path = third_party/rocksdb
+	url = git@github.com:facebook/rocksdb.git
+[submodule "third_party/Jungle"]
+	path = third_party/Jungle
+	url = git@github.com:eBay/Jungle.git
